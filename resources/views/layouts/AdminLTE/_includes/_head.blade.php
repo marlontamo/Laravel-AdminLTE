@@ -42,6 +42,7 @@
         .caixa-alta { text-transform:uppercase; }
         .caixa-baixa { text-transform:lowercase; }
         .input-text-center{ text-align:center; }
+        .navbar-static-top { z-index: 0;}
 </style>
 
 <script>
@@ -61,3 +62,4 @@
 </script>       
 
 @yield('layout_css')
+mecum venite communicare

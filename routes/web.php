@@ -46,4 +46,11 @@ Route::group(['namespace' => 'App\Http\Controllers\User'], function (){
 	Route::put('/role/update/{id}', 'RoleController@update')->name('role.update');
 	Route::get('/role/show/{id}', 'RoleController@show')->name('role.show');
 	Route::get('/role/destroy/{id}', 'RoleController@destroy')->name('role.destroy');
+	
+});
+//Store
+Route::group(['namespace' => 'App\Http\Controllers\Store'], function (){
+Route::get('/store', 'StoreController@index')->name('store-list');
+Route::get('/store/create', 'StoreController@create')->name('create-store');
+Route::post('/store/store', 'StoreController@store')->name('store-store');
 });

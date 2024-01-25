@@ -35,6 +35,14 @@
 								<i class="fa fa-gear"></i> <span> Settings App</span>
 							</a>
 						</li>
+						<li class="
+						{{ Request::segment(1) === 'user' ? 'active' : null }}
+						{{ Request::segment(1) === 'role' ? 'active' : null }}
+						">
+						<a href="{{ route('store-list') }}" title="Stores">
+							<i class="fa fa-home"></i> <span> Store's</span>
+						</a>
+					</li>
 					@endif					
 					<li class="
 						{{ Request::segment(1) === 'user' ? 'active' : null }}
@@ -45,7 +53,29 @@
 						</a>
 					</li>
 				</ul>
-			</li>      
+			</li>
+			<li class="treeview
+			            {{ Request::segment(1) === null ? 'active' : null }}
+						{{ Request::segment(1) === 'store' ? 'active' : null }}
+				">
+				<a href="{{ route('store-list')}}">
+					<i class="fa fa-home"></i>
+					<span>Stores</span>
+					<span class="pull-right-container">
+						<i class="fa fa-angle-left pull-right"></i>
+					</span>
+				</a>
+				<ul class="treeview-menu">
+				<li class="
+						{{ Request::segment(1) === 'user' ? 'active' : null }}
+						{{ Request::segment(1) === 'role' ? 'active' : null }}
+						">
+						<a href="{{ route('create-store') }}" title="Stores">
+							<i class="fa fa-home"></i> <span> Create Store</span>
+						</a>
+					</li>
+				</ul>
+      </li>    
 		</ul>
 	</section>
 </aside>
