@@ -62,4 +62,3 @@
 </script>       
 
 @yield('layout_css')
-mecum venite communicare

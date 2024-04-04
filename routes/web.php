@@ -7,8 +7,8 @@ Route::impersonate();
 
 Auth::routes();
 
-Route::get('/', 'App\Http\Controllers\HomeController@index');
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::get('/config', 'App\Http\Controllers\ConfigController@index')->name('config');
 Route::put('/config/update/{id}', 'App\Http\Controllers\ConfigController@update')->name('config.update');
 Route::post('/config/store/permission_group', 'App\Http\Controllers\ConfigController@storePermissionGroup')->name('config.store.permission_group');
@@ -51,6 +51,10 @@ Route::group(['namespace' => 'App\Http\Controllers\User'], function (){
 //Store
 Route::group(['namespace' => 'App\Http\Controllers\Store'], function (){
 Route::get('/store', 'StoreController@index')->name('store-list');
+Route::get('/store/edit/{id}', 'StoreController@show')->name('store-show');
 Route::get('/store/create', 'StoreController@create')->name('create-store');
 Route::post('/store/store', 'StoreController@store')->name('store-store');
+});
+Route::get('/home', function(){
+	return "front-end";
 });

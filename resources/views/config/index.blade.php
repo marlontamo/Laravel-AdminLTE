@@ -326,8 +326,8 @@
                             <br/><br/>
                             <div class="col-md-12">	
                                 <div class="table-responsive">
-                                    <table class="table table-condensed table-bordered table-hover">
-                                        <thead>
+                                     class="table table-condensed table-bordered table-hover">
+                                        <thead><table
                                             <tr>			 
                                                 <th>ID</th>			 
                                                 <th>Name</th>			 

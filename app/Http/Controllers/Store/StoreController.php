@@ -8,7 +8,15 @@ use App\Models\Store;
 class StoreController extends Controller
 {
    public function index(){
-    return view('store.index');
+    $store = Store::all();
+    $data = compact('store');
+    return view('store.index', $data);
+   }
+   public function show($id){
+      $store = Store::findOrFail($id);
+      $data = compact('store');
+      return view('store.show', $data);
+     dd($store);
    }
    public function create(){
     return view('store.create');
